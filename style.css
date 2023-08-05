@@ -27,6 +27,7 @@ body{
     background-image: linear-gradient(rgb(223, 116, 137), rgb(115, 248, 248));
     margin: 0;
     height: 100vh;
+    flex-wrap: wrap;
 }
 
 
@@ -83,6 +84,7 @@ header img:hover{
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    padding: 15px;
     
 }
 
@@ -95,6 +97,7 @@ header img:hover{
     padding: 50px;
     border-radius: 24px;
     box-shadow:#211F1F 0px 0px 10px 0px;
+    min-width: 300px;
 
 }
 
@@ -121,6 +124,7 @@ header img:hover{
     padding: 50px;
     border-radius: 24px;
     box-shadow:#211F1F 0px 0px 10px 0px;
+    min-width: 300px;
    
 }
 
@@ -212,7 +216,7 @@ footer{
     bottom: 15px; 
     right: 15px;
     margin: 10px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .footer-social a{
@@ -312,3 +316,102 @@ footer .copy{
 }
 
 
+/* Estilos para pantallas más pequeñas utilizando media queries */
+@media screen and (max-width: 1200px) {
+    
+    .cabecera .social-media-button-logo {
+        
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;
+        justify-content: center;
+        z-index: 2;
+        
+        
+        align-items: center;
+        
+    }
+    
+    
+    
+    header img{
+        
+        width: 120px;
+        
+    }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        
+    }
+
+    footer{
+        height: 55px;
+        line-height:100px;
+        text-align:center;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas medianas y pequeñas */
+
+    header img{
+        width: 100px;
+    }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    /* Estilos para las secciones en pantallas medianas y pequeñas */
+    .welcome, .projects {
+        text-align: center; /* Alinear el texto al centro en pantallas más pequeñas */
+    }
+
+    /* Estilos para los íconos de redes sociales en pantallas medianas y pequeñas */
+    .social-media-button img {
+        max-width: 20px;
+    }
+
+    footer p{
+        font-size: 15px;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas */
+@media screen and (max-width: 480px) {
+    /* Aquí puedes agregar estilos adicionales para pantallas aún más pequeñas si lo necesitas */
+    .cabecera{
+        margin-top: 0;
+    }
+    
+    header img{
+        width: 75px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+}
